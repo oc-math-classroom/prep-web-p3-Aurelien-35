@@ -1,0 +1,30 @@
+/* Colors */
+
+$primary-color : #aed581;
+$primary-light :#e1ffb1;
+$primary-dark : #7da453;
+
+/* Fonts */
+
+/* Page */
+
+.page {
+    width: 1280px;
+    height: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.top-band {
+    height: 8px;
+    background-color: $primary-dark;
+}
+
+.title-band {
+    height: 96px;
+    background-color: $primary-color; 
+}
+
+.shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+}

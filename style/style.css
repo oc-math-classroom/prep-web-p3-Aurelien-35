@@ -1,3 +1,25 @@
+/* Colors */
+/* Fonts */
+/* Page */
+.page {
+  width: 1280px;
+  height: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
 
+.top-band {
+  height: 8px;
+  background-color: #7da453;
+}
+
+.title-band {
+  height: 96px;
+  background-color: #aed581;
+}
+
+.shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
 
 /*# sourceMappingURL=style.css.map */
