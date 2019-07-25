@@ -6,6 +6,9 @@ $primary-dark : #7da453;
 
 /* Fonts */
 
+$frank :  'Frank Ruhl Libre', serif;
+$montserrat : 'Montserrat', sans-serif;
+
 /* Page */
 
 .page {
@@ -22,9 +25,24 @@ $primary-dark : #7da453;
 
 .title-band {
     height: 96px;
-    background-color: $primary-color; 
+    background-color: white;
 }
 
 .shadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title-1 {
+    font-family: $frank;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: -0.2rem;
+    color: black;
+    line-height: 96px;
+    text-indent: 0.5rem;
+}
+
+.horizontal-box {
+    display: flex;
+    justify-content: center;
 }
