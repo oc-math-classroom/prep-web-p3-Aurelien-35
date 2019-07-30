@@ -59,6 +59,22 @@
   max-width: 200px;
   max-height: 300px;
   transform-origin: 50% 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-card h3 {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .menu-card:hover {
