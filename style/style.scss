@@ -12,10 +12,11 @@ $montserrat : 'Montserrat', sans-serif;
 /* Page */
 
 .page {
-    width: 1280px;
-    height: 1000px;
-    margin: auto;
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .top-band {
@@ -24,7 +25,7 @@ $montserrat : 'Montserrat', sans-serif;
 }
 
 .title-band {
-    height: 96px;
+    height: 72px;
     background-color: white;
 }
 
@@ -32,17 +33,92 @@ $montserrat : 'Montserrat', sans-serif;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.resize-for-small-screen {
+    height: 72px;
+    width: 72px;
+    object-fit: cover;
+}
+
 .title-1 {
     font-family: $frank;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: -0.2rem;
     color: black;
-    line-height: 96px;
-    text-indent: 0.5rem;
+    line-height: 72px;
+    text-indent: 0.3rem;
+    margin-right: 1rem;
 }
 
 .horizontal-box {
     display: flex;
     justify-content: center;
+}
+
+.box-wrap {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-card {
+    margin: 8px;
+    width: 40vw;
+    height: 60vw;
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.footer-content {
+    height: 36px;
+    background-color: white;
+    border-top: 1px solid $primary-light;
+    margin: 8px 8px 0px 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content a {
+    font-family: $montserrat;
+    font-size: 1rem;
+    line-height: 24px;
+    text-decoration: none;
+    color: $primary-color;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.footer-content a:hover {
+    border-bottom: 2px solid $primary-dark;
+    color: $primary-dark;
+}
+
+.bottom-band {
+    height: 8px;
+    background-color: $primary-dark;
+}
+
+@media (min-width : 768px) {
+    .title-1 {
+        font-family: $frank;
+        font-size: 4rem;
+        font-weight: 300;
+        letter-spacing: -0.2rem;
+        color: black;
+        line-height: 96px;
+        text-indent: 0.5rem;
+    }
+
+    .title-band {
+        height: 96px;
+        background-color: white;
+    }
+
+    .resize-for-small-screen {
+        height: 96px;
+        width: 96px;
+        object-fit: cover;
+    }
 }
