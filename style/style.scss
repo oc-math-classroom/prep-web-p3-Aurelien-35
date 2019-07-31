@@ -9,6 +9,26 @@ $primary-dark : #7da453;
 $frank :  'Frank Ruhl Libre', serif;
 $montserrat : 'Montserrat', sans-serif;
 
+$menu-1-primary : 'Eagle Lake', cursive;
+$menu-1-secondary : 'Roboto', sans-serif;
+
+$menu-2-primary : 'Tangerine', cursive;
+$menu-2-secondary : 'Lato', sans-serif;
+
+$menu-3-primary : 'Poiret One', cursive;
+$menu-3-secondary : 'Playfair Display', serif;
+
+$menu-4-primary : 'Allura', cursive;
+$menu-4-secondary : 'EB Garamond', serif;
+
+/* Width & Height */
+
+$menu-width : 40vw;
+$menu-height : $menu-width * 1.5;
+$max-menu-width : 200px;
+$max-menu-height : $max-menu-width * 1.5;
+
+
 /* Page */
 
 .page {
@@ -27,6 +47,10 @@ $montserrat : 'Montserrat', sans-serif;
 .title-band {
     height: 72px;
     background-color: white;
+}
+
+.z-over {
+    z-index: 10;
 }
 
 .shadow {
@@ -59,32 +83,96 @@ $montserrat : 'Montserrat', sans-serif;
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;    
+}
+
+.color-light {
+    background-color: $primary-light;
 }
 
 .menu-card {
+    box-sizing: border-box;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
     margin: 8px;
-    width: 40vw;
-    height: 60vw;
-    max-width: 200px;
-    max-height: 300px;
+    width: $menu-width;
+    height: $menu-height;
+    max-width: $max-menu-width;
+    max-height: $max-menu-height;
     transform-origin: 50% 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.menu-card a {
+    position: absolute;
+    width: $menu-width;
+    height: $menu-height;
+    max-width: $max-menu-width;
+    max-height: $max-menu-height;
 }
 
 .menu-card h3 {
-    font-family: $frank;
-    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
+.line-break {
+    word-spacing: 200px;
+}
+
 .menu-card h2 {
-    font-family: $montserrat;
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+#menu-1 {
+    h3 {
+        font-family: $menu-1-primary;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-family: $menu-1-secondary;
+    }
+}
+
+#menu-2 {
+    h3 {
+        font-family: $menu-2-primary;
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-family: $menu-2-secondary;
+    }
+}
+
+#menu-3 {
+    h3 {
+        font-family: $menu-3-primary;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: $menu-3-secondary;
+    }
+}
+
+#menu-4 {
+    h3 {
+        font-family: $menu-4-primary;
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-family: $menu-4-secondary;
+    }
 }
 
 .menu-card:hover {
@@ -100,13 +188,14 @@ $montserrat : 'Montserrat', sans-serif;
     color: black;
     border-radius: 4px;
     padding: 8px;
+    margin-bottom: 8px;
 }
 
 .footer-content {
     height: 36px;
     background-color: white;
-    border-top: 1px solid $primary-light;
-    margin: 8px 8px 0px 8px;
+    border-top: 1px solid $primary-color;
+    margin: 0px 8px 0px 8px;
     padding: 4px;
     display: flex;
     justify-content: center;
@@ -115,15 +204,17 @@ $montserrat : 'Montserrat', sans-serif;
 .footer-content a {
     font-family: $montserrat;
     font-size: 1rem;
-    line-height: 24px;
+    line-height: 16px;
     text-decoration: none;
     color: $primary-color;
+    padding: 4px;
     margin-left: 4vw;
     margin-right: 4vw;
 }
 
 .footer-content a:hover {
     border-bottom: 2px solid $primary-dark;
+    background-color: $primary-light;
     color: $primary-dark;
 }
 

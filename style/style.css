@@ -1,5 +1,6 @@
 /* Colors */
 /* Fonts */
+/* Width & Height */
 /* Page */
 .page {
   overflow: hidden;
@@ -17,6 +18,10 @@
 .title-band {
   height: 72px;
   background-color: white;
+}
+
+.z-over {
+  z-index: 10;
 }
 
 .shadow {
@@ -52,7 +57,14 @@
   justify-content: center;
 }
 
+.color-light {
+  background-color: #e1ffb1;
+}
+
 .menu-card {
+  box-sizing: border-box;
+  border-top: 1px solid #aed581;
+  border-bottom: 1px solid #aed581;
   margin: 8px;
   width: 40vw;
   height: 60vw;
@@ -62,19 +74,64 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.menu-card a {
+  position: absolute;
+  width: 40vw;
+  height: 60vw;
+  max-width: 200px;
+  max-height: 300px;
 }
 
 .menu-card h3 {
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
+.line-break {
+  word-spacing: 200px;
+}
+
 .menu-card h2 {
-  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+#menu-1 h3 {
+  font-family: "Eagle Lake", cursive;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+#menu-1 h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+#menu-2 h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 2.2rem;
+}
+#menu-2 h2 {
+  font-family: "Lato", sans-serif;
+}
+
+#menu-3 h3 {
+  font-family: "Poiret One", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#menu-3 h2 {
+  font-family: "Playfair Display", serif;
+}
+
+#menu-4 h3 {
+  font-family: "Allura", cursive;
   font-size: 2rem;
-  margin-top: 1rem;
+}
+#menu-4 h2 {
+  font-family: "EB Garamond", serif;
 }
 
 .menu-card:hover {
@@ -90,13 +147,14 @@
   color: black;
   border-radius: 4px;
   padding: 8px;
+  margin-bottom: 8px;
 }
 
 .footer-content {
   height: 36px;
   background-color: white;
-  border-top: 1px solid #e1ffb1;
-  margin: 8px 8px 0px 8px;
+  border-top: 1px solid #aed581;
+  margin: 0px 8px 0px 8px;
   padding: 4px;
   display: flex;
   justify-content: center;
@@ -105,15 +163,17 @@
 .footer-content a {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 16px;
   text-decoration: none;
   color: #aed581;
+  padding: 4px;
   margin-left: 4vw;
   margin-right: 4vw;
 }
 
 .footer-content a:hover {
   border-bottom: 2px solid #7da453;
+  background-color: #e1ffb1;
   color: #7da453;
 }
 
