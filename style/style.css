@@ -20,6 +20,10 @@
   background-color: white;
 }
 
+.title-band a {
+  text-decoration: none;
+}
+
 .z-over {
   z-index: 10;
 }
@@ -55,6 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex: 1 1 auto;
 }
 
 .color-light {
@@ -148,6 +153,7 @@
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 .footer-content {
@@ -155,7 +161,6 @@
   background-color: white;
   border-top: 1px solid #aed581;
   margin: 0px 8px 0px 8px;
-  padding: 4px;
   display: flex;
   justify-content: center;
 }
@@ -166,20 +171,78 @@
   line-height: 16px;
   text-decoration: none;
   color: #aed581;
-  padding: 4px;
+  padding: 8px;
   margin-left: 4vw;
   margin-right: 4vw;
+  transition: all 0.35s ease-in-out;
 }
 
 .footer-content a:hover {
-  border-bottom: 2px solid #7da453;
-  background-color: #e1ffb1;
-  color: #7da453;
+  background-color: #aed581;
+  color: white;
 }
 
 .bottom-band {
   height: 8px;
   background-color: #7da453;
+}
+
+/* pages menu */
+.page-menu-1 h1, .page-menu-1 h2 {
+  font-family: "Eagle Lake", cursive;
+}
+.page-menu-1 td {
+  font-family: "Roboto", sans-serif;
+}
+
+.page-menu {
+  background-color: #e1ffb1;
+  flex: 1 1 auto;
+  padding: 4vw;
+}
+.page-menu h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+.page-menu h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.page-menu .bloc-menu {
+  margin-top: 1rem;
+}
+.page-menu .bloc-menu table {
+  border-spacing: 0 5px;
+}
+.page-menu .bloc-menu td {
+  font-size: 0.85rem;
+  line-height: 1rem;
+}
+.page-menu .bloc-menu td:nth-child(even) {
+  width: 12vw;
+  text-align: right;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.page-menu .bloc-menu td:nth-child(odd) {
+  width: 80vw;
+  text-align: left;
+}
+.page-menu .bloc-title-line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.page-menu .bloc-title-line .line-left {
+  flex: 1 1 auto;
+  background: linear-gradient(to left, #aed581, black);
+  clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
+}
+.page-menu .bloc-title-line .line-right {
+  flex: 1 1 auto;
+  background: linear-gradient(to right, #aed581, black);
+  clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
 }
 
 @media (min-width: 768px) {
