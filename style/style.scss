@@ -251,6 +251,10 @@ $band-height : 72px;
     text-align: center;
     font-size: 2rem;
     margin-top: 3rem;
+    background: radial-gradient(circle at center, $primary-dark 5%, black);
+    background-clip: text;
+    color: transparent;
+    animation: background-movement 20s infinite;
     }
 
     h2 {
