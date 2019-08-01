@@ -59,7 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 1 1 auto;
+  flex-basis: auto;
 }
 
 .color-light {
@@ -83,12 +83,8 @@
   background-color: white;
 }
 
-.menu-card a {
-  position: absolute;
-  width: 40vw;
-  height: 60vw;
-  max-width: 200px;
-  max-height: 300px;
+.box-wrap a {
+  color: black;
 }
 
 .menu-card h3 {
@@ -250,23 +246,6 @@
 }
 
 /* pages menu */
-.page-menu-1 h1, .page-menu-1 h2 {
-  font-family: "Eagle Lake", cursive;
-}
-.page-menu-1 td {
-  font-family: "Roboto", sans-serif;
-}
-.page-menu-1 .menu-big-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 0.5rem 0 1.5rem 0;
-  line-height: 2.5rem;
-  background: radial-gradient(circle at center, #7da453, black 35%);
-  background-clip: text;
-  color: transparent;
-  animation: background-movement 20s infinite;
-}
-
 .page-menu {
   background-color: #e1ffb1;
   flex: 1 1 auto;
@@ -310,6 +289,41 @@
   flex: 1 1 auto;
   background: linear-gradient(to right, #aed581, black);
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+}
+
+.page-menu-1 h1,
+.page-menu-1 h2 {
+  font-family: "Eagle Lake", cursive;
+}
+.page-menu-1 td {
+  font-family: "Roboto", sans-serif;
+}
+.page-menu-1 .menu-big-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.5rem 0 1.5rem 0;
+  line-height: 2.5rem;
+  background: radial-gradient(circle at center, #7da453, black 35%);
+  background-clip: text;
+  color: transparent;
+  animation: background-movement 20s infinite;
+}
+
+.page-menu-2 h1,
+.page-menu-2 h2 {
+  font-family: "Tangerine", cursive;
+}
+.page-menu-2 td {
+  font-family: "Lato", sans-serif;
+}
+.page-menu-2 .menu-big-title {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0.5rem 0 1.5rem 0;
+  line-height: 4rem;
+}
+.page-menu-2 h2 {
+  font-size: 2rem;
 }
 
 @media (min-width: 768px) {

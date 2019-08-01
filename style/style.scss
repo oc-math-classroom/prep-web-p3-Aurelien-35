@@ -6,20 +6,30 @@ $primary-dark : #7da453;
 
 /* Fonts */
 
-$frank :  'Frank Ruhl Libre', serif;
-$montserrat : 'Montserrat', sans-serif;
+$frank : 'Frank Ruhl Libre',
+serif;
+$montserrat : 'Montserrat',
+sans-serif;
 
-$menu-1-primary : 'Eagle Lake', cursive;
-$menu-1-secondary : 'Roboto', sans-serif;
+$menu-1-primary : 'Eagle Lake',
+cursive;
+$menu-1-secondary : 'Roboto',
+sans-serif;
 
-$menu-2-primary : 'Tangerine', cursive;
-$menu-2-secondary : 'Lato', sans-serif;
+$menu-2-primary : 'Tangerine',
+cursive;
+$menu-2-secondary : 'Lato',
+sans-serif;
 
-$menu-3-primary : 'Poiret One', cursive;
-$menu-3-secondary : 'Playfair Display', serif;
+$menu-3-primary : 'Poiret One',
+cursive;
+$menu-3-secondary : 'Playfair Display',
+serif;
 
-$menu-4-primary : 'Allura', cursive;
-$menu-4-secondary : 'EB Garamond', serif;
+$menu-4-primary : 'Allura',
+cursive;
+$menu-4-secondary : 'EB Garamond',
+serif;
 
 /* Width & Height */
 
@@ -88,7 +98,7 @@ $band-height : 72px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex: 1 1 auto;    
+    flex-basis: auto;
 }
 
 .color-light {
@@ -112,12 +122,9 @@ $band-height : 72px;
     background-color: white;
 }
 
-.menu-card a {
-    position: absolute;
-    width: $menu-width;
-    height: $menu-height;
-    max-width: $max-menu-width;
-    max-height: $max-menu-height;
+.box-wrap a {
+    color: black;
+
 }
 
 .menu-card h3 {
@@ -236,34 +243,12 @@ $band-height : 72px;
 }
 
 @for $item from 0 to 14 {
-    .letter-animation:nth-of-type(#{$item}){ 
-        animation-delay: #{(1 + ($item / 2))}s; 
-      }
+    .letter-animation:nth-of-type(#{$item}) {
+        animation-delay: #{(1 + ($item / 2))}s;
+    }
 }
 
 /* pages menu */
-
-.page-menu-1 {
-
-    h1, h2 {
-        font-family: $menu-1-primary;
-    }
-
-    td {
-        font-family: $menu-1-secondary;
-    }
-
-    .menu-big-title {
-        text-align: center;
-        font-size: 2rem;
-        margin: 0.5rem 0 1.5rem 0;
-        line-height: 2.5rem;
-        background: radial-gradient(circle at center, $primary-dark , black 35%);
-        background-clip: text;
-        color: transparent;
-        animation: background-movement 20s infinite;
-        }
-}
 
 .page-menu {
 
@@ -297,7 +282,7 @@ $band-height : 72px;
 
         td:nth-child(odd) {
             width: 80vw;
-            text-align: left; 
+            text-align: left;
         }
 
     }
@@ -319,6 +304,55 @@ $band-height : 72px;
             clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
         }
 
+    }
+
+}
+
+.page-menu-1 {
+
+    h1,
+    h2 {
+        font-family: $menu-1-primary;
+    }
+
+    td {
+        font-family: $menu-1-secondary;
+    }
+
+    .menu-big-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0.5rem 0 1.5rem 0;
+        line-height: 2.5rem;
+        background: radial-gradient(circle at center, $primary-dark, black 35%);
+        background-clip: text;
+        color: transparent;
+        animation: background-movement 20s infinite;
+    }
+
+
+}
+
+.page-menu-2 {
+
+    h1,
+    h2 {
+        font-family: $menu-2-primary;
+    }
+
+    td {
+        font-family: $menu-2-secondary;
+    }
+
+    .menu-big-title {
+        text-align: center;
+        font-size: 4rem;
+        margin: 0.5rem 0 1.5rem 0;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
 }
