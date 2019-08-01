@@ -306,6 +306,19 @@ $band-height : 72px;
     }
 }
 
+/* animation bouton prochainement */
+
+.letter-animation {
+    opacity: 0;
+    animation: typewriter 10s forwards;
+}
+
+@for $item from 0 to 14 {
+    .letter-animation:nth-of-type(#{$item}){ 
+        animation-delay: #{(1 + ($item / 2))}s; 
+      }
+}
+
 @media (min-width : 768px) {
     .title-1 {
         font-family: $frank;

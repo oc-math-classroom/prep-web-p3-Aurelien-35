@@ -249,6 +249,68 @@
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
 }
 
+/* animation bouton prochainement */
+.letter-animation {
+  opacity: 0;
+  animation: typewriter 10s forwards;
+}
+
+.letter-animation:nth-of-type(0) {
+  animation-delay: 1s;
+}
+
+.letter-animation:nth-of-type(1) {
+  animation-delay: 1.5s;
+}
+
+.letter-animation:nth-of-type(2) {
+  animation-delay: 2s;
+}
+
+.letter-animation:nth-of-type(3) {
+  animation-delay: 2.5s;
+}
+
+.letter-animation:nth-of-type(4) {
+  animation-delay: 3s;
+}
+
+.letter-animation:nth-of-type(5) {
+  animation-delay: 3.5s;
+}
+
+.letter-animation:nth-of-type(6) {
+  animation-delay: 4s;
+}
+
+.letter-animation:nth-of-type(7) {
+  animation-delay: 4.5s;
+}
+
+.letter-animation:nth-of-type(8) {
+  animation-delay: 5s;
+}
+
+.letter-animation:nth-of-type(9) {
+  animation-delay: 5.5s;
+}
+
+.letter-animation:nth-of-type(10) {
+  animation-delay: 6s;
+}
+
+.letter-animation:nth-of-type(11) {
+  animation-delay: 6.5s;
+}
+
+.letter-animation:nth-of-type(12) {
+  animation-delay: 7s;
+}
+
+.letter-animation:nth-of-type(13) {
+  animation-delay: 7.5s;
+}
+
 @media (min-width: 768px) {
   .title-1 {
     font-family: "Frank Ruhl Libre", serif;
