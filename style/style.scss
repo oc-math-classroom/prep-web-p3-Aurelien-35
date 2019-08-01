@@ -228,6 +228,19 @@ $band-height : 72px;
     background-color: $primary-dark;
 }
 
+/* animation bouton prochainement */
+
+.letter-animation {
+    opacity: 0;
+    animation: typewriter 10s forwards;
+}
+
+@for $item from 0 to 14 {
+    .letter-animation:nth-of-type(#{$item}){ 
+        animation-delay: #{(1 + ($item / 2))}s; 
+      }
+}
+
 /* pages menu */
 
 .page-menu-1 {
@@ -239,6 +252,17 @@ $band-height : 72px;
     td {
         font-family: $menu-1-secondary;
     }
+
+    .menu-big-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0.5rem 0 1.5rem 0;
+        line-height: 2.5rem;
+        background: radial-gradient(circle at center, $primary-dark , black 35%);
+        background-clip: text;
+        color: transparent;
+        animation: background-movement 20s infinite;
+        }
 }
 
 .page-menu {
@@ -246,16 +270,6 @@ $band-height : 72px;
     background-color: $primary-light;
     flex: 1 1 auto;
     padding: 4vw;
-
-    h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 3rem;
-    background: radial-gradient(circle at center, $primary-dark 5%, black);
-    background-clip: text;
-    color: transparent;
-    animation: background-movement 20s infinite;
-    }
 
     h2 {
         text-align: center;
@@ -285,6 +299,7 @@ $band-height : 72px;
             width: 80vw;
             text-align: left; 
         }
+
     }
 
     .bloc-title-line {
@@ -303,20 +318,9 @@ $band-height : 72px;
             background: linear-gradient(to right, $primary-color, black);
             clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
         }
+
     }
-}
 
-/* animation bouton prochainement */
-
-.letter-animation {
-    opacity: 0;
-    animation: typewriter 10s forwards;
-}
-
-@for $item from 0 to 14 {
-    .letter-animation:nth-of-type(#{$item}){ 
-        animation-delay: #{(1 + ($item / 2))}s; 
-      }
 }
 
 @media (min-width : 768px) {
