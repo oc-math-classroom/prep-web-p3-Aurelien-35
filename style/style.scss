@@ -82,7 +82,7 @@ $band-height : 72px;
     line-height: $band-height;
     text-indent: 0.3rem;
     margin-right: 1rem;
-    word-spacing: -1rem;
+    word-spacing: -0.75rem;
 }
 
 .shadow {
@@ -236,19 +236,6 @@ $band-height : 72px;
     background-color: $primary-dark;
 }
 
-/* animation bouton prochainement */
-
-.letter-animation {
-    opacity: 0;
-    animation: typewriter 10s forwards;
-}
-
-@for $item from 0 to 14 {
-    .letter-animation:nth-of-type(#{$item}) {
-        animation-delay: #{(1 + ($item / 2))}s;
-    }
-}
-
 /* pages menu */
 
 .page-menu {
@@ -287,6 +274,8 @@ $band-height : 72px;
         }
 
     }
+
+    /* lignes-formes qui entourent les titres */
 
     .bloc-title-line {
         display: flex;
