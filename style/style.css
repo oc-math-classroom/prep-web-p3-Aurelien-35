@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-.z-over {
+.move-to-front {
   z-index: 10;
 }
 
