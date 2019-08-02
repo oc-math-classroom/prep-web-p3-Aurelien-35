@@ -47,6 +47,7 @@
   line-height: 72px;
   text-indent: 0.3rem;
   margin-right: 1rem;
+  word-spacing: -1rem;
 }
 
 .horizontal-box {
