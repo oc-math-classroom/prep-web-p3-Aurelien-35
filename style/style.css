@@ -15,6 +15,10 @@
   background-color: #7da453;
 }
 
+.move-to-front {
+  z-index: 10;
+}
+
 .title-band {
   height: 72px;
   background-color: white;
@@ -22,14 +26,6 @@
 
 .title-band a {
   text-decoration: none;
-}
-
-.move-to-front {
-  z-index: 10;
-}
-
-.shadow {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .resize-for-small-screen {
@@ -48,6 +44,10 @@
   text-indent: 0.3rem;
   margin-right: 1rem;
   word-spacing: -1rem;
+}
+
+.shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .horizontal-box {
@@ -157,7 +157,7 @@
   height: 36px;
   background-color: white;
   border-top: 1px solid #aed581;
-  margin: 0px 8px 0px 8px;
+  margin: 0px 8px;
   display: flex;
   justify-content: center;
 }
@@ -169,8 +169,8 @@
   text-decoration: none;
   color: #aed581;
   padding: 8px;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  margin-left: 8px;
+  margin-right: 8px;
   transition: all 0.35s ease-in-out;
 }
 
