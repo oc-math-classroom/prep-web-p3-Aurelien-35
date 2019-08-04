@@ -305,16 +305,50 @@
 .page-menu-2 h2 {
   font-family: "Tangerine", cursive;
 }
-.page-menu-2 td {
+.page-menu-2 p {
   font-family: "Lato", sans-serif;
 }
 .page-menu-2 .menu-big-title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0.5rem 0 1.5rem 0;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 .page-menu-2 h2 {
+  font-size: 2rem;
+}
+
+.page-menu-3 h1,
+.page-menu-3 h2 {
+  font-family: "Poiret One", cursive;
+}
+.page-menu-3 p {
+  font-family: "Playfair Display", serif;
+}
+.page-menu-3 .menu-big-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0.5rem 0 1.5rem 0;
+  line-height: 2.5rem;
+}
+.page-menu-3 h2 {
+  font-size: 2rem;
+}
+
+.page-menu-4 h1,
+.page-menu-4 h2 {
+  font-family: "Allura", cursive;
+}
+.page-menu-4 p {
+  font-family: "EB Garamond", serif;
+}
+.page-menu-4 .menu-big-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 1.5rem 0;
+  line-height: 3rem;
+}
+.page-menu-4 h2 {
   font-size: 2rem;
 }
 
