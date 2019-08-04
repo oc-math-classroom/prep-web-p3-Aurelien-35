@@ -86,6 +86,7 @@
 
 .box-wrap a {
   color: black;
+  text-decoration: none;
 }
 
 .menu-card h3 {
