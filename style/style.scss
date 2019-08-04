@@ -274,7 +274,11 @@ $band-height-small : 48px;
     color: black;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
-    margin-right: 4rem;
+}
+
+.align-center {
+    flex-grow: 1;
+    margin-right: 2rem;
 }
 
 .start-box {
@@ -361,7 +365,7 @@ $band-height-small : 48px;
     .menu-big-title {
         text-align: center;
         font-size: 2rem;
-        margin: 0.5rem 0 1.5rem 0;
+        margin: 0 0 1.5rem 0;
         line-height: 2.5rem;
         background: radial-gradient(circle at center, $primary-dark, black 35%);
         background-clip: text;
