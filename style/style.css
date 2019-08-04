@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Colors */
 /* Fonts */
 /* Width & Height */
@@ -8,6 +9,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #e1ffb1;
 }
 
 .top-band {
@@ -154,11 +156,15 @@
   margin-top: 4px;
 }
 
+.green-line {
+  margin: 0px 8px;
+  background-color: #aed581;
+  height: 1px;
+}
+
 .footer-content {
   height: 36px;
   background-color: white;
-  border-top: 1px solid #aed581;
-  margin: 0px 8px;
   display: flex;
   justify-content: center;
 }
@@ -186,10 +192,47 @@
 }
 
 /* pages menu */
+/* reduction du bandeau titre */
+.title-band-reduce {
+  height: 48px;
+}
+
+.resize-reduce {
+  height: 48px;
+  width: 48px;
+}
+
+.title-1-reduce {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.2rem;
+  color: black;
+  line-height: 48px;
+  text-indent: 0.3rem;
+  margin-right: 1rem;
+  word-spacing: -0.75rem;
+}
+
+/* ajouté une icone pour signifier un lien de retour vers la page principale */
+.return-icon {
+  line-height: 48px;
+  font-size: 2rem;
+  color: black;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 4rem;
+}
+
+.start-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .page-menu {
   background-color: #e1ffb1;
   flex: 1 1 auto;
-  padding: 4vw;
+  padding: 4px 8px;
+  max-width: 800px;
   /* lignes-formes qui entourent les titres */
 }
 .page-menu h2 {
@@ -199,21 +242,25 @@
 .page-menu .bloc-menu {
   margin-top: 1rem;
 }
-.page-menu .bloc-menu table {
-  border-spacing: 0 5px;
+.page-menu .bloc-menu .line {
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
 }
-.page-menu .bloc-menu td {
+.page-menu .bloc-menu p {
   font-size: 0.85rem;
   line-height: 1rem;
 }
-.page-menu .bloc-menu td:nth-child(even) {
-  width: 12vw;
+.page-menu .bloc-menu p:nth-child(even) {
+  display: flex;
+  flex-direction: column;
   text-align: right;
-  vertical-align: middle;
+  justify-content: center;
   font-weight: bold;
 }
-.page-menu .bloc-menu td:nth-child(odd) {
-  width: 80vw;
+.page-menu .bloc-menu p:nth-child(odd) {
+  max-width: 80%;
   text-align: left;
 }
 .page-menu .bloc-title-line {
@@ -236,7 +283,7 @@
 .page-menu-1 h2 {
   font-family: "Eagle Lake", cursive;
 }
-.page-menu-1 td {
+.page-menu-1 p {
   font-family: "Roboto", sans-serif;
 }
 .page-menu-1 .menu-big-title {

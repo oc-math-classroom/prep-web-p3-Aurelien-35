@@ -38,6 +38,7 @@ $menu-height : $menu-width * 1.5;
 $max-menu-width : 200px;
 $max-menu-height : $max-menu-width * 1.5;
 $band-height : 72px;
+$band-height-small : 48px;
 
 /* Page */
 
@@ -47,6 +48,7 @@ $band-height : 72px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $primary-light;
 }
 
 .top-band {
@@ -205,11 +207,15 @@ $band-height : 72px;
     margin-top: 4px;
 }
 
+.green-line {
+    margin: 0px 8px;
+    background-color: $primary-color;
+    height: 1px;
+}
+
 .footer-content {
     height: 36px;
     background-color: white;
-    border-top: 1px solid $primary-color;
-    margin: 0px 8px;
     display: flex;
     justify-content: center;
 }
@@ -238,11 +244,50 @@ $band-height : 72px;
 
 /* pages menu */
 
+/* reduction du bandeau titre */
+
+.title-band-reduce {
+    height: $band-height-small;
+}
+
+.resize-reduce {
+    height: $band-height-small;
+    width: $band-height-small;
+}
+
+.title-1-reduce {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.2rem;
+    color: black;
+    line-height: $band-height-small;
+    text-indent: 0.3rem;
+    margin-right: 1rem;
+    word-spacing: -0.75rem;
+}
+
+/* ajouté une icone pour signifier un lien de retour vers la page principale */
+
+.return-icon {
+    line-height: $band-height-small;
+    font-size: 2rem;
+    color: black;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 4rem;
+}
+
+.start-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .page-menu {
 
     background-color: $primary-light;
     flex: 1 1 auto;
-    padding: 4vw;
+    padding: 4px 8px;
+    max-width: 800px;
 
     h2 {
         text-align: center;
@@ -252,24 +297,28 @@ $band-height : 72px;
     .bloc-menu {
         margin-top: 1rem;
 
-        table {
-            border-spacing: 0 5px;
+        .line {
+            margin: auto;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
         }
 
-        td {
+        p {
             font-size: 0.85rem;
             line-height: 1rem;
         }
 
-        td:nth-child(even) {
-            width: 12vw;
+        p:nth-child(even) {
+            display: flex;
+            flex-direction: column;
             text-align: right;
-            vertical-align: middle;
+            justify-content: center;
             font-weight: bold;
         }
 
-        td:nth-child(odd) {
-            width: 80vw;
+        p:nth-child(odd) {
+            max-width: 80%;
             text-align: left;
         }
 
@@ -305,7 +354,7 @@ $band-height : 72px;
         font-family: $menu-1-primary;
     }
 
-    td {
+    p {
         font-family: $menu-1-secondary;
     }
 
