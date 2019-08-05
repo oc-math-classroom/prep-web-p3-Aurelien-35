@@ -1,8 +1,12 @@
 /* Colors */
 
-$primary-color : #aed581;
-$primary-light :#e1ffb1;
-$primary-dark : #7da453;
+$primary-color : #ffe082;
+$primary-light :#ffffb3;
+$primary-dark : #caae53;
+
+$secondary-color : #ffd54f;
+$secondary-light :#ffff81;
+$secondary-dark : #c8a415;
 
 /* Fonts */
 
@@ -88,7 +92,7 @@ $band-height-small : 48px;
 }
 
 .shadow {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 6px rgba(#caae53, 1), 0 2px 4px rgba(#caae53, 1);
 }
 
 .vertical-box-top {
@@ -343,13 +347,13 @@ $band-height-small : 48px;
 
         .line-left {
             flex: 1 1 auto;
-            background: linear-gradient(to left, $primary-color, black);
+            background: linear-gradient(to left, $secondary-color, black);
             clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
         }
 
         .line-right {
             flex: 1 1 auto;
-            background: linear-gradient(to right, $primary-color, black);
+            background: linear-gradient(to right, $secondary-color, black);
             clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
         }
 
@@ -373,7 +377,7 @@ $band-height-small : 48px;
         font-size: 2rem;
         margin: 0 0 1.5rem 0;
         line-height: 2.5rem;
-        background: radial-gradient(circle at center, $primary-dark, black 35%);
+        background: radial-gradient(circle at center, $secondary-color, black 35%);
         background-clip: text;
         color: transparent;
         animation: background-movement 20s infinite;

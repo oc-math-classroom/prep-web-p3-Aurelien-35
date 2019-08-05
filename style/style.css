@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #e1ffb1;
+  background-color: #ffffb3;
 }
 
 .top-band {
   height: 8px;
-  background-color: #7da453;
+  background-color: #caae53;
 }
 
 .move-to-front {
@@ -49,7 +49,7 @@
 }
 
 .shadow {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px #caae53, 0 2px 4px #caae53;
 }
 
 .vertical-box-top {
@@ -72,13 +72,13 @@
 }
 
 .color-light {
-  background-color: #e1ffb1;
+  background-color: #ffffb3;
 }
 
 .menu-card {
   box-sizing: border-box;
-  border-top: 1px solid #aed581;
-  border-bottom: 1px solid #aed581;
+  border-top: 1px solid #ffe082;
+  border-bottom: 1px solid #ffe082;
   margin: 8px;
   width: 40vw;
   height: 60vw;
@@ -151,7 +151,7 @@
 
 .button-next {
   line-height: 16px;
-  background-color: #aed581;
+  background-color: #ffe082;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   text-decoration: none;
@@ -164,7 +164,7 @@
 
 .color-line {
   margin: 0px 8px;
-  background-color: #aed581;
+  background-color: #ffe082;
   height: 1px;
 }
 
@@ -180,7 +180,7 @@
   font-size: 1rem;
   line-height: 16px;
   text-decoration: none;
-  color: #aed581;
+  color: #ffe082;
   padding: 8px;
   margin-left: 8px;
   margin-right: 8px;
@@ -188,13 +188,13 @@
 }
 
 .footer-content a:hover {
-  background-color: #aed581;
+  background-color: #ffe082;
   color: white;
 }
 
 .bottom-band {
   height: 8px;
-  background-color: #7da453;
+  background-color: #caae53;
 }
 
 /* pages menu */
@@ -239,7 +239,7 @@
 }
 
 .page-menu {
-  background-color: #e1ffb1;
+  background-color: #ffffb3;
   flex: 1 1 auto;
   padding: 4px 8px;
   max-width: 800px;
@@ -280,12 +280,12 @@
 }
 .page-menu .bloc-title-line .line-left {
   flex: 1 1 auto;
-  background: linear-gradient(to left, #aed581, black);
+  background: linear-gradient(to left, #ffd54f, black);
   clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
 }
 .page-menu .bloc-title-line .line-right {
   flex: 1 1 auto;
-  background: linear-gradient(to right, #aed581, black);
+  background: linear-gradient(to right, #ffd54f, black);
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
 }
 
@@ -301,7 +301,7 @@
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
   line-height: 2.5rem;
-  background: radial-gradient(circle at center, #7da453, black 35%);
+  background: radial-gradient(circle at center, #ffd54f, black 35%);
   background-clip: text;
   color: transparent;
   animation: background-movement 20s infinite;
@@ -409,14 +409,14 @@
   border-radius: 4px;
   padding: 4px;
   width: 96px;
-  background-color: #7da453;
+  background-color: #caae53;
   color: white;
   text-align: center;
   transition: all 0.35s ease-in-out;
 }
 .form-bloc .submit-button:hover {
   background-color: white;
-  color: #7da453;
+  color: #caae53;
 }
 
 @media (min-width: 768px) {
