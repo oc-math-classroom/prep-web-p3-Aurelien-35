@@ -12,7 +12,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Roboto&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0b17252669.js"></script>
@@ -21,13 +20,12 @@
 </head>
 
 <body>
+
     <div class="page">
+
         <header class="move-to-front">
             <div class="top-band"></div>
-
             <div class="title-band title-band-reduce shadow ">
-
-
                 <a href="../main.html" class="start-box">
                     <i class="fas fa-caret-left return-icon"></i>
                     <div class="horizontal-box align-center">
@@ -36,17 +34,38 @@
                     </div>
                 </a>
             </div>
-
         </header>
 
+        <section class="horizontal-box box-grow">
+            <div class="form-bloc">
+                <h2>Contactez-nous !</h2>
+                <form method="POST" action="">
+                    <p>
+                        <label for="contact-name">Votre nom</label> : <br>
+                        <input type="text" name="contact-name" id="contact-name" required autofocus>
+                    </p>
+                    <p>
+                        <label for="contact-email">Votre adresse email</label> : <br>
+                        <input type="email" name="contact-email" id="contact-email" required>
+                    </p>
+                    <p>
+                        <label for="contact-message">Votre message</label> : <br>
+                        <textarea name="contact-message" id="contact-message" required></textarea>
+                    </p>
+                    <input type="submit" value="Envoyer" class="submit-button">
+                </form>
+            </div>
+        </section>
+
         <footer>
+            <div class="color-line"></div>
             <div class="footer-content">
                 <a href="mentions-legales.html">Mentions légales</a>
                 <a href="#">Contactez nous</a>
             </div>
             <div class="bottom-band"></div>
-
         </footer>
+
     </div>
 
 </body>

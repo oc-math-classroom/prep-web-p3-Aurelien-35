@@ -5,7 +5,7 @@
 /* Page */
 .page {
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,6 +50,12 @@
 
 .shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vertical-box-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .horizontal-box {
@@ -156,7 +162,7 @@
   margin-top: 4px;
 }
 
-.green-line {
+.color-line {
   margin: 0px 8px;
   background-color: #aed581;
   height: 1px;
@@ -352,6 +358,7 @@
   font-size: 2rem;
 }
 
+/* pour mentions légales */
 .legal {
   margin: 8px;
   max-width: 800px;
@@ -363,6 +370,53 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* pour contact */
+.box-grow {
+  flex-grow: 2;
+}
+
+.form-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  max-width: 800px;
+  margin: 8px;
+}
+.form-bloc h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 16px;
+}
+.form-bloc p {
+  margin-top: 16px;
+}
+.form-bloc p input {
+  margin-top: 4px;
+  width: 200px;
+}
+.form-bloc textarea {
+  margin-top: 4px;
+  width: 200px;
+  height: 104px;
+}
+.form-bloc .submit-button {
+  margin-top: 16px;
+  line-height: 16px;
+  border-radius: 4px;
+  padding: 4px;
+  width: 96px;
+  background-color: #7da453;
+  color: white;
+  text-align: center;
+  transition: all 0.35s ease-in-out;
+}
+.form-bloc .submit-button:hover {
+  background-color: white;
+  color: #7da453;
 }
 
 @media (min-width: 768px) {
