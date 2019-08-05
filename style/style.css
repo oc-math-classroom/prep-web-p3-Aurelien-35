@@ -332,7 +332,7 @@
   line-height: 2.5rem;
 }
 .page-menu-3 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .page-menu-4 h1,
@@ -350,6 +350,19 @@
 }
 .page-menu-4 h2 {
   font-size: 2rem;
+}
+
+.legal {
+  margin: 8px;
+  max-width: 800px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+.legal h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
