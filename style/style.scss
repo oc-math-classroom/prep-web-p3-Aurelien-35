@@ -41,7 +41,7 @@ serif;
 
 $menu-width : 40vw;
 $menu-height : $menu-width * 1.5;
-$max-menu-width : 200px;
+$max-menu-width : 150px;
 $max-menu-height : $max-menu-width * 1.5;
 $band-height : 72px;
 $band-height-small : 48px;
@@ -541,6 +541,17 @@ $band-height-small : 48px;
 }
 
 @media (min-width : 768px) {
+
+    $max-menu-width : 200px;
+    $max-menu-height : $max-menu-width * 1.5;
+
+    .menu-card {
+        width: $menu-width;
+        height: $menu-height;
+        max-width: $max-menu-width;
+        max-height: $max-menu-height;
+    }
+
     .title-1 {
         font-family: $frank;
         font-size: 4rem;

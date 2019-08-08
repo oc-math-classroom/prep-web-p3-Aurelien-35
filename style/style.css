@@ -80,8 +80,8 @@
   margin: 8px;
   width: 40vw;
   height: 60vw;
-  max-width: 200px;
-  max-height: 300px;
+  max-width: 150px;
+  max-height: 225px;
   transform-origin: 50% 50%;
   text-align: center;
   display: flex;
@@ -427,6 +427,13 @@
   }
 }
 @media (min-width: 768px) {
+  .menu-card {
+    width: 40vw;
+    height: 60vw;
+    max-width: 200px;
+    max-height: 300px;
+  }
+
   .title-1 {
     font-family: "Frank Ruhl Libre", serif;
     font-size: 4rem;
