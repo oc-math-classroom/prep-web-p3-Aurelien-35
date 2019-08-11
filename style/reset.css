@@ -37,3 +37,9 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+/* nouveaux resets */
+
+input, textarea {
+	border: none;
+}

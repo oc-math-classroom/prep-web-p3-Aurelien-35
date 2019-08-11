@@ -1,41 +1,29 @@
 /* Colors */
-
-$primary-color : #9c27b0;
-/* Purple6*/
+    /* Purple6 */
+$primary-color : #9c27b0; 
 $primary-light :#d05ce3;
 $primary-dark : #6a0080;
-
+    /* Amber6 */
 $secondary-color : #ffc107;
-/* Amber6*/
 $secondary-light :#fff350;
 $secondary-dark : #c79100;
 
 /* Fonts */
 
-$frank : 'Frank Ruhl Libre',
-serif;
-$montserrat : 'Montserrat',
-sans-serif;
+$frank : 'Frank Ruhl Libre', serif;
+$montserrat : 'Montserrat', sans-serif;
 
-$menu-1-primary : 'Eagle Lake',
-cursive;
-$menu-1-secondary : 'Roboto',
-sans-serif;
+$menu-1-primary : 'Eagle Lake', cursive;
+$menu-1-secondary : 'Roboto', sans-serif;
 
-$menu-2-primary : 'Tangerine',
-cursive;
-$menu-2-secondary : 'Lato',
-sans-serif;
+$menu-2-primary : 'Tangerine', cursive;
+$menu-2-secondary : 'Lato', sans-serif;
 
-$menu-3-primary : 'Poiret One',
-cursive;
-$menu-3-secondary : 'Playfair Display',
-serif;
+$menu-3-primary : 'Poiret One', cursive;
+$menu-3-secondary : 'Playfair Display', serif;
 
-$menu-4-primary : 'Allura',
-cursive;
-$menu-4-secondary : 'EB Garamond',
-serif;
+$menu-4-primary : 'Allura', cursive;
+$menu-4-secondary : 'EB Garamond', serif;
 
 /* Width & Height */
 
@@ -49,15 +37,15 @@ $band-height-small : 48px;
 /* Page */
 
 .page {
-    overflow: hidden;
     min-height: 100vh;
+    overflow: hidden;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: whitesmoke;
 }
 
-.top-band {
+.color-band {
     height: 8px;
     background-color: $primary-dark;
 }
@@ -82,19 +70,24 @@ $band-height-small : 48px;
 }
 
 .title-1 {
+    margin-right: 1rem;
+    line-height: $band-height;
     font-family: $frank;
     font-size: 3rem;
     font-weight: 300;
-    letter-spacing: -0.2rem;
-    color: black;
-    line-height: $band-height;
+    letter-spacing: -0.2rem;        
     text-indent: 0.3rem;
-    margin-right: 1rem;
     word-spacing: -0.75rem;
+    color: black;
 }
 
 .shadow {
     box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
+    transition: all 0.15s ease-in-out;
+}
+
+.shadow:hover {
+    box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 20px rgba(black, 0.16);
 }
 
 .vertical-box-top {
@@ -117,20 +110,20 @@ $band-height-small : 48px;
 }
 
 .menu-card {
-    box-sizing: border-box;
-    border-top: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-    margin: 8px;
     width: $menu-width;
     height: $menu-height;
     max-width: $max-menu-width;
     max-height: $max-menu-height;
-    transform-origin: 50% 50%;
-    text-align: center;
+    margin: 8px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
     background-color: white;
+    box-sizing: border-box;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    transform-origin: 50% 50%;    
 }
 
 .box-wrap a {
@@ -146,10 +139,10 @@ $band-height-small : 48px;
     word-spacing: 200px;
 }
 
-.menu-card h2 {
-    font-size: 1.5rem;
+.menu-card h2 {    
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 #menu-1 {
@@ -208,11 +201,19 @@ $band-height-small : 48px;
     font-family: $montserrat;
     font-size: 1rem;
     text-decoration: none;
-    color: white;
+    color: $primary-dark;
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 8px;
     margin-top: 4px;
+    transition: all 0.35s ease-in-out;
+    border: 1px solid $secondary-color;
+    box-sizing: border-box;
+     
+}
+
+.button-next:hover {
+    background-color: white;
 }
 
 .color-line {
@@ -243,11 +244,6 @@ $band-height-small : 48px;
 .footer-content a:hover {
     background-color: $secondary-color;
     color: white;
-}
-
-.bottom-band {
-    height: 8px;
-    background-color: $primary-dark;
 }
 
 /* pages menu */
@@ -463,7 +459,7 @@ $band-height-small : 48px;
     max-width: 800px;
     color: black;
     font-family: $montserrat;
-    text-align: justify;
+    padding: 8px;
 
     h2 {
         text-align: center;
@@ -499,12 +495,20 @@ $band-height-small : 48px;
 
     p input {
         margin-top: 4px;
-        width: 200px;
+        margin-left: 4px;
+        border-bottom: 2px solid silver;
+        line-height: 1.4rem;
+        padding-left: 4px;
+        width: 96%;
     }
 
     textarea {
         margin-top: 4px;
-        width: 200px;
+        margin-left: 4px;
+        border-bottom: 2px solid silver;
+        line-height: 1.4rem;
+        padding-left: 4px;
+        width: 96%;
         height: 104px;
     }
 
@@ -537,6 +541,11 @@ $band-height-small : 48px;
         padding: 8px;
         margin-left: 8px;
         margin-right: 8px;
+    }
+
+    
+    .menu-card h2 {
+        margin-bottom: 3rem;
     }
 }
 
