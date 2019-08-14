@@ -1,9 +1,9 @@
 /* Colors */
-    /* Purple6 */
-$primary-color : #9c27b0; 
+/* Purple6 */
+$primary-color : #9c27b0;
 $primary-light :#d05ce3;
 $primary-dark : #6a0080;
-    /* Amber6 */
+/* Amber6 */
 $secondary-color : #ffc107;
 $secondary-light :#fff350;
 $secondary-dark : #c79100;
@@ -38,7 +38,7 @@ $band-height-small : 48px;
 
 .page {
     min-height: 100vh;
-    overflow: hidden;    
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,7 +75,7 @@ $band-height-small : 48px;
     font-family: $frank;
     font-size: 2.5rem;
     font-weight: 300;
-    letter-spacing: -0.1rem;        
+    letter-spacing: -0.1rem;
     text-indent: 0.3rem;
     word-spacing: -0.75rem;
     color: black;
@@ -87,7 +87,7 @@ $band-height-small : 48px;
 }
 
 .shadow:hover {
-    box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 20px rgba(black, 0.16);
+    box-shadow: 0 3px 12px rgba(black, 0.25), 0 2px 20px rgba(black, 0.16);
 }
 
 .vertical-box-top {
@@ -123,7 +123,7 @@ $band-height-small : 48px;
     box-sizing: border-box;
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
-    transform-origin: 50% 50%;    
+    transform-origin: 50% 50%;
 }
 
 .box-wrap a {
@@ -139,7 +139,7 @@ $band-height-small : 48px;
     word-spacing: 200px;
 }
 
-.menu-card-secondary-title {    
+.menu-card-secondary-title {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -147,9 +147,9 @@ $band-height-small : 48px;
 
 #menu-1 {
     .menu-card-primary-title {
+        margin-bottom: 1.5rem;
         font-family: $menu-1-primary;
         font-size: 1.2rem;
-        margin-bottom: 1.5rem;
     }
 
     .menu-card-secondary-title {
@@ -170,9 +170,9 @@ $band-height-small : 48px;
 
 #menu-3 {
     .menu-card-primary-title {
+        margin-bottom: 1rem;
         font-family: $menu-3-primary;
         font-size: 1.5rem;
-        margin-bottom: 1rem;
     }
 
     .menu-card-secondary-title {
@@ -197,19 +197,20 @@ $band-height-small : 48px;
 
 .button-next {
     line-height: 16px;
-    background-color: $secondary-color;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    padding: 8px;
     font-family: $montserrat;
     font-size: 1rem;
     text-decoration: none;
+    word-spacing: -16px;
     color: $primary-dark;
+    background-color: $secondary-color;
     border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 8px;
-    margin-top: 0px;
-    transition: all 0.35s ease-in-out;
     border: 1px solid $secondary-color;
     box-sizing: border-box;
-    word-spacing: -16px; 
+    transition: all 0.35s ease-in-out;
+
 }
 
 .button-next:hover {
@@ -217,33 +218,32 @@ $band-height-small : 48px;
 }
 
 .color-line {
+    height: 1px;
     margin: 0px 8px;
     background-color: $primary-light;
-    height: 1px;
 }
 
 .footer-content {
     height: 36px;
-    background-color: white;
     display: flex;
     justify-content: center;
+    background-color: white;
 }
 
 .footer-content a {
+    line-height: 20px;
+    margin: 0px 4px 0px 4px;
+    padding: 8px 4px 4px;
     font-family: $montserrat;
     font-size: 1rem;
-    line-height: 16px;
     text-decoration: none;
     color: $primary-color;
-    padding: 4px;
-    margin-left: 4px;
-    margin-right: 4px;
     transition: all 0.35s ease-in-out;
 }
 
 .footer-content a:hover {
-    background-color: $secondary-color;
     color: white;
+    background-color: $secondary-color;
 }
 
 /* pages menu */
@@ -261,24 +261,24 @@ $band-height-small : 48px;
 }
 
 .title-1-reduce {
+    line-height: $band-height-small;
+    margin-right: 0.4rem;
     font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: -0.1rem;
-    color: black;
-    line-height: $band-height-small;
     text-indent: 0.3rem;
-    margin-right: 0.4rem;
     word-spacing: -0.75rem;
+    color: black;
 }
 
 /* ajouté une icone pour signifier un lien de retour vers la page principale */
 
 .return-icon {
     line-height: $band-height-small;
-    font-size: 2rem;
-    color: black;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+    font-size: 2rem;
+    color: black;
 }
 
 .align-center {
@@ -293,9 +293,9 @@ $band-height-small : 48px;
 
 .page-menu {
 
-    padding: 4px 8px;
     max-width: 800px;
     margin-bottom: 16px;
+    padding: 4px 8px;
 
     .bloc-menu-title {
         text-align: center;
@@ -309,15 +309,16 @@ $band-height-small : 48px;
         }
 
         .line {
-            margin: auto;
             max-width: 600px;
+            margin: auto;
             display: flex;
             justify-content: space-between;
         }
 
-        .line-item, .line-price {
-            font-size: 0.85rem;
+        .line-item,
+        .line-price {
             line-height: 1rem;
+            font-size: 0.85rem;
         }
 
         .line-item {
@@ -328,9 +329,9 @@ $band-height-small : 48px;
         .line-price {
             display: flex;
             flex-direction: column;
-            text-align: right;
             justify-content: center;
             font-weight: bold;
+            text-align: right;
         }
 
     }
@@ -338,9 +339,9 @@ $band-height-small : 48px;
     /* lignes-formes qui entourent les titres */
 
     .bloc-title-line {
+        margin-bottom: 1rem;
         display: flex;
         justify-content: center;
-        margin-bottom: 1rem;
 
         .line-left {
             flex: 1 1 auto;
@@ -366,16 +367,16 @@ $band-height-small : 48px;
     }
 
     .menu-big-title {
+        line-height: 2.5rem;
+        margin: 0 0 1.5rem 0;
         text-align: center;
         font-size: 2rem;
-        margin: 0 0 1.5rem 0;
-        line-height: 2.5rem;
+        color: transparent;
         background: radial-gradient(circle at center, $secondary-color, black 20%);
         background-clip: text;
-        color: transparent;
         animation: background-movement 20s infinite;
     }
-    
+
     .line {
         font-family: $menu-1-secondary;
     }
@@ -390,16 +391,16 @@ $band-height-small : 48px;
     }
 
     .menu-big-title {
+        line-height: 3rem;
+        margin: 0.5rem 0 1.5rem 0;
         text-align: center;
         font-size: 3rem;
-        margin: 0.5rem 0 1.5rem 0;
-        line-height: 3rem;
     }
 
     .bloc-menu-title {
         font-size: 2rem;
     }
-    
+
     .line {
         font-family: $menu-2-secondary;
     }
@@ -414,16 +415,16 @@ $band-height-small : 48px;
     }
 
     .menu-big-title {
+        line-height: 2.5rem;
+        margin: 0.5rem 0 1.5rem 0;
         text-align: center;
         font-size: 2.5rem;
-        margin: 0.5rem 0 1.5rem 0;
-        line-height: 2.5rem;
     }
 
     .bloc-menu-title {
         font-size: 1.5rem;
     }
-    
+
     .line {
         font-family: $menu-3-secondary;
     }
@@ -438,16 +439,16 @@ $band-height-small : 48px;
     }
 
     .menu-big-title {
+        line-height: 3rem;
+        margin: 0.5rem 0 1.5rem 0;
         text-align: center;
         font-size: 3rem;
-        margin: 0.5rem 0 1.5rem 0;
-        line-height: 3rem;
     }
 
     .bloc-menu-title {
         font-size: 2rem;
     }
-    
+
     .line {
         font-family: $menu-4-secondary;
     }
@@ -457,16 +458,16 @@ $band-height-small : 48px;
 /* pour mentions légales */
 
 .legal {
-    margin: 8px;
     max-width: 800px;
-    color: black;
-    font-family: $montserrat;
+    margin: 8px;
     padding: 8px;
+    font-family: $montserrat;
+    color: black;
 
     .legal-bloc-title {
+        margin-bottom: 1rem;
         text-align: center;
         font-size: 2rem;
-        margin-bottom: 1rem;
     }
 }
 
@@ -477,59 +478,62 @@ $band-height-small : 48px;
 }
 
 .form-bloc {
+    max-width: 800px;
+    margin: 8px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     color: black;
+
+}
+
+.form-title {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 2rem;
     font-family: $montserrat;
-    max-width: 800px;
-    margin: 8px;
+}
 
-    .form-title {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 16px;
-    }
+.input-bloc {
+    min-width: 244px;
+    line-height: 36px;
+    margin-top: 16px;
+    margin-left: 4px;
+    padding-left: 16px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    font-weight: normal;
+    border-bottom: 1px solid silver;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
 
-    .input-bloc {
-        margin-top: 16px;
-    }
+.input-bloc-textarea {
+    height: 140px;
+}
 
-    .input-bloc input {
-        margin-top: 4px;
-        margin-left: 4px;
-        border-bottom: 2px solid silver;
-        line-height: 1.4rem;
-        padding-left: 4px;
-        width: 96%;
-    }
+.align-right {
+    padding-right: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
 
-    .input-bloc textarea {
-        margin-top: 4px;
-        margin-left: 4px;
-        border-bottom: 2px solid silver;
-        line-height: 1.4rem;
-        padding-left: 4px;
-        width: 96%;
-        height: 104px;
-    }
+.submit-button {
+    width: 96px;
+    line-height: 16px;
+    margin-top: 16px;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    background-color: $primary-dark;
+    border-radius: 4px;
+    border: 1px solid $primary-dark;
+    transition: all 0.35s ease-in-out;
+}
 
-    .submit-button {
-        margin-top: 16px;
-        line-height: 16px;
-        border-radius: 4px;
-        padding: 4px;
-        width: 96px;
-        background-color: $primary-dark;
-        color: white;
-        text-align: center;
-        transition: all 0.35s ease-in-out;
-    }
-
-    .submit-button:hover {
-        background-color: white;
-        color: $primary-dark;
-    }
+.submit-button:hover {
+    color: $primary-dark;
+    background-color: white;
 }
 
 @media (min-width : 375px) {
@@ -539,27 +543,29 @@ $band-height-small : 48px;
     .color-band {
         height: 8px;
     }
-    
+
     .title-band {
         height: $band-height;
     }
-    
+
     .resize-for-small-screen {
         height: $band-height;
         width: $band-height;
         object-fit: cover;
     }
-    
+
     .title-1 {
         margin-right: 1rem;
         line-height: $band-height;
         font-size: 3rem;
-        letter-spacing: -0.2rem;        
+        letter-spacing: -0.2rem;
         text-indent: 0.3rem;
         word-spacing: -0.75rem;
     }
 
-    .page-menu-2, .page-menu-3, .page-menu-4 {
+    .page-menu-2,
+    .page-menu-3,
+    .page-menu-4 {
         .menu-big-title {
             margin-top: 16px;
         }
@@ -579,7 +585,7 @@ $band-height-small : 48px;
         margin-right: 8px;
     }
 
-    
+
     .menu-card .menu-card-secondary-title {
         margin-bottom: 3rem;
     }
@@ -587,8 +593,8 @@ $band-height-small : 48px;
 
 @media (min-width : 768px) {
 
-    $max-menu-width : 200px;
-    $max-menu-height : $max-menu-width * 1.5;
+    $max-menu-width: 200px;
+    $max-menu-height: $max-menu-width * 1.5;
 
     .menu-card {
         width: $menu-width;
@@ -597,25 +603,23 @@ $band-height-small : 48px;
         max-height: $max-menu-height;
     }
 
-    .title-1, .title-1-reduce {
-        font-family: $frank;
-        font-size: 4rem;
-        font-weight: 300;
-        letter-spacing: -0.2rem;
-        color: black;
+    .title-1,
+    .title-1-reduce {
         line-height: 96px;
+        font-size: 4rem;
+        letter-spacing: -0.2rem;
         text-indent: 0.5rem;
     }
 
-    .title-band, .title-band-reduce {
+    .title-band,
+    .title-band-reduce {
         height: 96px;
-        background-color: white;
     }
 
-    .resize-for-small-screen, .resize-reduce {
+    .resize-for-small-screen,
+    .resize-reduce {
         height: 96px;
         width: 96px;
-        object-fit: cover;
     }
 
     .page-menu {
@@ -634,11 +638,11 @@ $band-height-small : 48px;
 
         .bloc-menu {
             margin-top: 1rem;
+            padding: 16px;
             background-color: white;
             box-sizing: border-box;
             border-top: 1px solid whitesmoke;
             border-bottom: 1px solid whitesmoke;
-            padding: 16px 16px;
             box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
 
             .line {
@@ -647,11 +651,13 @@ $band-height-small : 48px;
         }
     }
 
-    .page-menu-2, .page-menu-4 {
+    .page-menu-2,
+    .page-menu-4 {
         .menu-big-title {
             margin-top: 32px;
             font-size: 4rem;
         }
+
         .bloc-menu-title {
             font-size: 2.5rem;
         }
@@ -662,6 +668,7 @@ $band-height-small : 48px;
             margin-top: 32px;
             font-size: 3rem;
         }
+
         .bloc-menu-title {
             font-size: 2rem;
         }
@@ -669,24 +676,24 @@ $band-height-small : 48px;
 
     #menu-1 {
         .menu-card-primary-title {
+            margin-bottom: 24px;
             font-size: 1.9rem;
-            margin-bottom: 1.5rem;
         }
     }
-    
+
     #menu-2 {
         .menu-card-primary-title {
             font-size: 3.2rem;
         }
     }
-    
+
     #menu-3 {
         .menu-card-primary-title {
             font-size: 2.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
         }
     }
-    
+
     #menu-4 {
         .menu-card-primary-title {
             font-size: 3rem;
@@ -694,10 +701,10 @@ $band-height-small : 48px;
     }
 
     .return-icon {
-        font-size: 4rem;
-        color: black;
         margin-top: 1rem;
         margin-left: 2rem;
+        font-size: 4rem;
+        color: black;
     }
 
     .legal-bloc-title {
@@ -706,5 +713,9 @@ $band-height-small : 48px;
 
     .align-center {
         margin-right: 3.3rem;
+    }
+
+    .input-bloc-textarea {
+        height: 280px;
     }
 }

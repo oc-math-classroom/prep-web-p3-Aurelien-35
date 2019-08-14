@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="formulaire pour contacter Oh My Food !" />
+    <meta name="description" content="Formulaire pour contacter Oh My Food !" />
     <link rel="shortcut icon" type="image/x-icon" href="../images/ico-omf.png" />
     <link rel="stylesheet" href="../style/reset.css" />
     <link rel="stylesheet" href="../style/style.css" />
@@ -40,19 +40,21 @@
             <section class="form-bloc">
                 <h2 class="form-title">Contactez-nous !</h2>
                 <form method="POST">
-                    <p class="input-bloc">
-                        <label for="contact-name">Nom</label> : <br>
-                        <input type="text" name="contact-name" id="contact-name"autofocus>
+                    <p>
+                        <input class="input-bloc" type="text" name="contact-name" id="contact-name" autofocus
+                            placeholder="Nom">
                     </p>
-                    <p class="input-bloc">
-                        <label for="contact-email">Adresse email</label> : <br>
-                        <input type="email" name="contact-email" id="contact-email" required>
+                    <p>
+                        <input class="input-bloc" type="email" name="contact-email" id="contact-email" required
+                            placeholder="Email">
                     </p>
-                    <p class="input-bloc">
-                        <label for="contact-message">Message</label> : <br>
-                        <textarea name="contact-message" id="contact-message"></textarea>
+                    <p>
+                        <textarea class="input-bloc input-bloc-textarea" name="contact-message" id="contact-message"
+                            placeholder="Message"></textarea>
                     </p>
-                    <input type="submit" value="Envoyer" class="submit-button">
+                    <div class="align-right">
+                        <input type="submit" value="Envoyer" class="submit-button">
+                    </div>
                 </form>
             </section>
         </main>
