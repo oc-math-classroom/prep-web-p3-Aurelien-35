@@ -43,3 +43,7 @@ ol, ul {
 input, textarea {
 	border: none;
 }
+
+a {
+	text-decoration: none;
+}

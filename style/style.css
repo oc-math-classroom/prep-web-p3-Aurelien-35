@@ -15,7 +15,7 @@
 }
 
 .color-band {
-  height: 8px;
+  height: 4px;
   background-color: #6a0080;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .title-band {
-  height: 72px;
+  height: 48px;
   background-color: white;
 }
 
@@ -33,18 +33,18 @@
 }
 
 .resize-for-small-screen {
-  height: 72px;
-  width: 72px;
+  height: 48px;
+  width: 48px;
   object-fit: cover;
 }
 
 .title-1 {
   margin-right: 1rem;
-  line-height: 72px;
+  line-height: 48px;
   font-family: "Frank Ruhl Libre", serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   text-indent: 0.3rem;
   word-spacing: -0.75rem;
   color: black;
@@ -100,7 +100,7 @@
   text-decoration: none;
 }
 
-.menu-card h3 {
+.menu-card-primary-title {
   margin-bottom: 0.5rem;
 }
 
@@ -108,43 +108,43 @@
   word-spacing: 200px;
 }
 
-.menu-card h2 {
+.menu-card-secondary-title {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1.5rem;
 }
 
-#menu-1 h3 {
+#menu-1 .menu-card-primary-title {
   font-family: "Eagle Lake", cursive;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-#menu-1 h2 {
+#menu-1 .menu-card-secondary-title {
   font-family: "Roboto", sans-serif;
 }
 
-#menu-2 h3 {
+#menu-2 .menu-card-primary-title {
   font-family: "Tangerine", cursive;
   font-size: 2.2rem;
 }
-#menu-2 h2 {
+#menu-2 .menu-card-secondary-title {
   font-family: "Lato", sans-serif;
 }
 
-#menu-3 h3 {
+#menu-3 .menu-card-primary-title {
   font-family: "Poiret One", cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-#menu-3 h2 {
+#menu-3 .menu-card-secondary-title {
   font-family: "Playfair Display", serif;
 }
 
-#menu-4 h3 {
+#menu-4 .menu-card-primary-title {
   font-family: "Allura", cursive;
   font-size: 2rem;
 }
-#menu-4 h2 {
+#menu-4 .menu-card-secondary-title {
   font-family: "EB Garamond", serif;
 }
 
@@ -162,10 +162,11 @@
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 8px;
-  margin-top: 4px;
+  margin-top: 0px;
   transition: all 0.35s ease-in-out;
   border: 1px solid #ffc107;
   box-sizing: border-box;
+  word-spacing: -16px;
 }
 
 .button-next:hover {
@@ -206,6 +207,7 @@
 /* reduction du bandeau titre */
 .title-band-reduce {
   height: 48px;
+  background-color: white;
 }
 
 .resize-reduce {
@@ -214,13 +216,13 @@
 }
 
 .title-1-reduce {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   color: black;
   line-height: 48px;
   text-indent: 0.3rem;
-  margin-right: 1rem;
+  margin-right: 0.4rem;
   word-spacing: -0.75rem;
 }
 
@@ -246,9 +248,10 @@
 .page-menu {
   padding: 4px 8px;
   max-width: 800px;
+  margin-bottom: 16px;
   /* lignes-formes qui entourent les titres */
 }
-.page-menu h2 {
+.page-menu .bloc-menu-title {
   text-align: center;
   font-size: 1.2rem;
 }
@@ -261,20 +264,20 @@
   display: flex;
   justify-content: space-between;
 }
-.page-menu .bloc-menu p {
+.page-menu .bloc-menu .line-item, .page-menu .bloc-menu .line-price {
   font-size: 0.85rem;
   line-height: 1rem;
 }
-.page-menu .bloc-menu p:nth-child(even) {
+.page-menu .bloc-menu .line-item {
+  max-width: 80%;
+  text-align: left;
+}
+.page-menu .bloc-menu .line-price {
   display: flex;
   flex-direction: column;
   text-align: right;
   justify-content: center;
   font-weight: bold;
-}
-.page-menu .bloc-menu p:nth-child(odd) {
-  max-width: 80%;
-  text-align: left;
 }
 .page-menu .bloc-title-line {
   display: flex;
@@ -292,12 +295,9 @@
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
 }
 
-.page-menu-1 h1,
-.page-menu-1 h2 {
+.page-menu-1 .menu-big-title,
+.page-menu-1 .bloc-menu-title {
   font-family: "Eagle Lake", cursive;
-}
-.page-menu-1 p {
-  font-family: "Roboto", sans-serif;
 }
 .page-menu-1 .menu-big-title {
   text-align: center;
@@ -309,13 +309,13 @@
   color: transparent;
   animation: background-movement 20s infinite;
 }
-
-.page-menu-2 h1,
-.page-menu-2 h2 {
-  font-family: "Tangerine", cursive;
+.page-menu-1 .line {
+  font-family: "Roboto", sans-serif;
 }
-.page-menu-2 p {
-  font-family: "Lato", sans-serif;
+
+.page-menu-2 .menu-big-title,
+.page-menu-2 .bloc-menu-title {
+  font-family: "Tangerine", cursive;
 }
 .page-menu-2 .menu-big-title {
   text-align: center;
@@ -323,16 +323,16 @@
   margin: 0.5rem 0 1.5rem 0;
   line-height: 3rem;
 }
-.page-menu-2 h2 {
+.page-menu-2 .bloc-menu-title {
   font-size: 2rem;
 }
-
-.page-menu-3 h1,
-.page-menu-3 h2 {
-  font-family: "Poiret One", cursive;
+.page-menu-2 .line {
+  font-family: "Lato", sans-serif;
 }
-.page-menu-3 p {
-  font-family: "Playfair Display", serif;
+
+.page-menu-3 .menu-big-title,
+.page-menu-3 .bloc-title-line {
+  font-family: "Poiret One", cursive;
 }
 .page-menu-3 .menu-big-title {
   text-align: center;
@@ -340,16 +340,16 @@
   margin: 0.5rem 0 1.5rem 0;
   line-height: 2.5rem;
 }
-.page-menu-3 h2 {
+.page-menu-3 .bloc-menu-title {
   font-size: 1.5rem;
 }
-
-.page-menu-4 h1,
-.page-menu-4 h2 {
-  font-family: "Allura", cursive;
+.page-menu-3 .line {
+  font-family: "Playfair Display", serif;
 }
-.page-menu-4 p {
-  font-family: "EB Garamond", serif;
+
+.page-menu-4 .menu-big-title,
+.page-menu-4 .bloc-title-line {
+  font-family: "Allura", cursive;
 }
 .page-menu-4 .menu-big-title {
   text-align: center;
@@ -357,8 +357,11 @@
   margin: 0.5rem 0 1.5rem 0;
   line-height: 3rem;
 }
-.page-menu-4 h2 {
+.page-menu-4 .bloc-menu-title {
   font-size: 2rem;
+}
+.page-menu-4 .line {
+  font-family: "EB Garamond", serif;
 }
 
 /* pour mentions légales */
@@ -369,7 +372,7 @@
   font-family: "Montserrat", sans-serif;
   padding: 8px;
 }
-.legal h2 {
+.legal .legal-bloc-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -389,15 +392,15 @@
   max-width: 800px;
   margin: 8px;
 }
-.form-bloc h2 {
+.form-bloc .form-title {
   font-size: 2rem;
   text-align: center;
   margin-top: 16px;
 }
-.form-bloc p {
+.form-bloc .input-bloc {
   margin-top: 16px;
 }
-.form-bloc p input {
+.form-bloc .input-bloc input {
   margin-top: 4px;
   margin-left: 4px;
   border-bottom: 2px solid silver;
@@ -405,7 +408,7 @@
   padding-left: 4px;
   width: 96%;
 }
-.form-bloc textarea {
+.form-bloc .input-bloc textarea {
   margin-top: 4px;
   margin-left: 4px;
   border-bottom: 2px solid silver;
@@ -431,8 +434,38 @@
 }
 
 @media (min-width: 375px) {
-  .page-menu-2 h1, .page-menu-3 h1, .page-menu-4 h1 {
+  .color-band {
+    height: 8px;
+  }
+
+  .title-band {
+    height: 72px;
+  }
+
+  .resize-for-small-screen {
+    height: 72px;
+    width: 72px;
+    object-fit: cover;
+  }
+
+  .title-1 {
+    margin-right: 1rem;
+    line-height: 72px;
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+    text-indent: 0.3rem;
+    word-spacing: -0.75rem;
+  }
+
+  .page-menu-2 .menu-big-title, .page-menu-3 .menu-big-title, .page-menu-4 .menu-big-title {
     margin-top: 16px;
+  }
+  .page-menu-2 .bloc-menu-title, .page-menu-3 .bloc-menu-title, .page-menu-4 .bloc-menu-title {
+    font-size: 2.1rem;
+  }
+
+  .page-menu-3 .bloc-menu-title {
+    font-size: 1.5rem;
   }
 
   .footer-content a {
@@ -441,7 +474,7 @@
     margin-right: 8px;
   }
 
-  .menu-card h2 {
+  .menu-card .menu-card-secondary-title {
     margin-bottom: 3rem;
   }
 }
@@ -453,7 +486,7 @@
     max-height: 300px;
   }
 
-  .title-1 {
+  .title-1, .title-1-reduce {
     font-family: "Frank Ruhl Libre", serif;
     font-size: 4rem;
     font-weight: 300;
@@ -463,12 +496,12 @@
     text-indent: 0.5rem;
   }
 
-  .title-band {
+  .title-band, .title-band-reduce {
     height: 96px;
     background-color: white;
   }
 
-  .resize-for-small-screen {
+  .resize-for-small-screen, .resize-reduce {
     height: 96px;
     width: 96px;
     object-fit: cover;
@@ -481,7 +514,7 @@
   .page-menu .menu-big-title {
     margin-top: 1rem;
   }
-  .page-menu h2 {
+  .page-menu .bloc-menu-title {
     text-align: center;
     font-size: 1.2rem;
   }
@@ -494,41 +527,41 @@
     padding: 16px 16px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.16);
   }
-  .page-menu .bloc-menu p {
+  .page-menu .bloc-menu .line {
     font-size: 1rem;
   }
 
-  .page-menu-2 h1, .page-menu-4 h1 {
+  .page-menu-2 .menu-big-title, .page-menu-4 .menu-big-title {
     margin-top: 32px;
     font-size: 4rem;
   }
-  .page-menu-2 h2, .page-menu-4 h2 {
+  .page-menu-2 .bloc-menu-title, .page-menu-4 .bloc-menu-title {
     font-size: 2.5rem;
   }
 
-  .page-menu-3 h1 {
+  .page-menu-3 .menu-big-title {
     margin-top: 32px;
     font-size: 3rem;
   }
-  .page-menu-3 h2 {
+  .page-menu-3 .bloc-menu-title {
     font-size: 2rem;
   }
 
-  #menu-1 h3 {
+  #menu-1 .menu-card-primary-title {
     font-size: 1.9rem;
     margin-bottom: 1.5rem;
   }
 
-  #menu-2 h3 {
+  #menu-2 .menu-card-primary-title {
     font-size: 3.2rem;
   }
 
-  #menu-3 h3 {
+  #menu-3 .menu-card-primary-title {
     font-size: 2.2rem;
     margin-bottom: 1rem;
   }
 
-  #menu-4 h3 {
+  #menu-4 .menu-card-primary-title {
     font-size: 3rem;
   }
 
@@ -539,7 +572,7 @@
     margin-left: 2rem;
   }
 
-  .legal h2 {
+  .legal-bloc-title {
     margin-top: 16px;
   }
 
