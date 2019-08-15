@@ -160,7 +160,6 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   text-decoration: none;
-  word-spacing: -16px;
   color: #6a0080;
   background-color: #ffc107;
   border-radius: 4px;
@@ -288,11 +287,13 @@
   flex: 1 1 auto;
   background: linear-gradient(to left, black, #d05ce3);
   clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
+  -webkit-clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
 }
 .page-menu .bloc-title-line .line-right {
   flex: 1 1 auto;
   background: linear-gradient(to right, black, #d05ce3);
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+  -webkit-clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
 }
 
 .page-menu-1 .menu-big-title,
@@ -304,10 +305,7 @@
   margin: 0 0 1.5rem 0;
   text-align: center;
   font-size: 2rem;
-  color: transparent;
-  background: radial-gradient(circle at center, #ffc107, black 20%);
-  background-clip: text;
-  animation: background-movement 20s infinite;
+  color: black;
 }
 .page-menu-1 .line {
   font-family: "Roboto", sans-serif;
@@ -539,6 +537,14 @@
   }
   .page-menu .bloc-menu .line {
     font-size: 1rem;
+  }
+
+  .page-menu-1 .menu-big-title {
+    color: transparent;
+    background: radial-gradient(circle at center, #ffc107, black 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: background-movement 20s infinite;
   }
 
   .page-menu-2 .menu-big-title,

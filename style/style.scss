@@ -203,7 +203,6 @@ $band-height-small : 48px;
     font-family: $montserrat;
     font-size: 1rem;
     text-decoration: none;
-    word-spacing: -16px;
     color: $primary-dark;
     background-color: $secondary-color;
     border-radius: 4px;
@@ -347,12 +346,14 @@ $band-height-small : 48px;
             flex: 1 1 auto;
             background: linear-gradient(to left, black, $primary-light);
             clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
+            -webkit-clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
         }
 
         .line-right {
             flex: 1 1 auto;
             background: linear-gradient(to right, black, $primary-light);
             clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+            -webkit-clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
         }
 
     }
@@ -371,10 +372,7 @@ $band-height-small : 48px;
         margin: 0 0 1.5rem 0;
         text-align: center;
         font-size: 2rem;
-        color: transparent;
-        background: radial-gradient(circle at center, $secondary-color, black 20%);
-        background-clip: text;
-        animation: background-movement 20s infinite;
+        color: black;
     }
 
     .line {
@@ -651,6 +649,17 @@ $band-height-small : 48px;
         }
     }
 
+    .page-menu-1 {
+    
+        .menu-big-title {
+            color: transparent;
+            background: radial-gradient(circle at center, $secondary-color, black 20%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: background-movement 20s infinite;
+        }
+    }
+
     .page-menu-2,
     .page-menu-4 {
         .menu-big-title {
@@ -679,6 +688,8 @@ $band-height-small : 48px;
             margin-bottom: 24px;
             font-size: 1.9rem;
         }
+
+        
     }
 
     #menu-2 {
