@@ -50,6 +50,10 @@
   color: black;
 }
 
+.shadow-static {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
 .shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.16);
   transition: all 0.15s ease-in-out;
@@ -247,7 +251,7 @@
   max-width: 800px;
   margin-bottom: 16px;
   padding: 4px 8px;
-  /* lignes-formes qui entourent les titres */
+  /* lignes décoratives qui entourent les titres */
 }
 .page-menu .bloc-menu-title {
   text-align: center;
@@ -294,6 +298,16 @@
   background: linear-gradient(to right, black, #d05ce3);
   clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
   -webkit-clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+}
+
+/* lignes décoratives plus fines pour menu 2 et 4 */
+.page-menu-2 .bloc-title-line .line-left, .page-menu-4 .bloc-title-line .line-left {
+  clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+  -webkit-clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+}
+.page-menu-2 .bloc-title-line .line-right, .page-menu-4 .bloc-title-line .line-right {
+  clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
+  -webkit-clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
 }
 
 .page-menu-1 .menu-big-title,
@@ -518,6 +532,7 @@
   .page-menu {
     padding: 8px 8px;
     max-width: 800px;
+    /* ajout d'un cadre blanc sur le menu pour l'affichage desktop */
   }
   .page-menu .menu-big-title {
     margin-top: 1rem;
@@ -539,6 +554,9 @@
     font-size: 1rem;
   }
 
+  .page-menu-1 {
+    /* animation sur le titre */
+  }
   .page-menu-1 .menu-big-title {
     color: transparent;
     background: radial-gradient(circle at center, #ffc107, black 20%);
@@ -547,22 +565,36 @@
     animation: background-movement 20s infinite;
   }
 
-  .page-menu-2 .menu-big-title,
-.page-menu-4 .menu-big-title {
-    margin-top: 32px;
+  .page-menu-2 .menu-big-title {
     font-size: 4rem;
   }
-  .page-menu-2 .bloc-menu-title,
-.page-menu-4 .bloc-menu-title {
+
+  .page-menu-4 .menu-big-title {
+    font-size: 3.5rem;
+  }
+
+  .page-menu-2 .menu-big-title, .page-menu-4 .menu-big-title {
+    line-height: 4.5rem;
+  }
+  .page-menu-2 .bloc-menu-title, .page-menu-4 .bloc-menu-title {
     font-size: 2.5rem;
   }
 
   .page-menu-3 .menu-big-title {
-    margin-top: 32px;
     font-size: 3rem;
+    line-height: 5rem;
   }
   .page-menu-3 .bloc-menu-title {
     font-size: 2rem;
+  }
+
+  /* animation sur le titre */
+  .page-menu-2 .menu-big-title, .page-menu-3 .menu-big-title, .page-menu-4 .menu-big-title {
+    color: transparent;
+    background: radial-gradient(circle at center, #fff350, black 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: background-movement 20s infinite;
   }
 
   #menu-1 .menu-card-primary-title {

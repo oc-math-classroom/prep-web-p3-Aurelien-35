@@ -81,6 +81,10 @@ $band-height-small : 48px;
     color: black;
 }
 
+.shadow-static {
+    box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
+}
+
 .shadow {
     box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
     transition: all 0.15s ease-in-out;
@@ -335,7 +339,7 @@ $band-height-small : 48px;
 
     }
 
-    /* lignes-formes qui entourent les titres */
+    /* lignes décoratives qui entourent les titres */
 
     .bloc-title-line {
         margin-bottom: 1rem;
@@ -355,9 +359,21 @@ $band-height-small : 48px;
             clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
             -webkit-clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
         }
+    }  
+}
 
+/* lignes décoratives plus fines pour menu 2 et 4 */
+.page-menu-2, .page-menu-4 {
+    .bloc-title-line {
+        .line-left {
+            clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+            -webkit-clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+        }
+        .line-right {
+            clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
+            -webkit-clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
+        }        
     }
-
 }
 
 .page-menu-1 {
@@ -634,6 +650,7 @@ $band-height-small : 48px;
             font-size: 1.2rem;
         }
 
+        /* ajout d'un cadre blanc sur le menu pour l'affichage desktop */
         .bloc-menu {
             margin-top: 1rem;
             padding: 16px;
@@ -650,7 +667,7 @@ $band-height-small : 48px;
     }
 
     .page-menu-1 {
-    
+    /* animation sur le titre */
         .menu-big-title {
             color: transparent;
             background: radial-gradient(circle at center, $secondary-color, black 20%);
@@ -660,11 +677,17 @@ $band-height-small : 48px;
         }
     }
 
-    .page-menu-2,
-    .page-menu-4 {
+    .page-menu-2 .menu-big-title {
+        font-size: 4rem;
+    }
+
+    .page-menu-4 .menu-big-title {
+        font-size: 3.5rem;
+    }
+
+    .page-menu-2, .page-menu-4 {
         .menu-big-title {
-            margin-top: 32px;
-            font-size: 4rem;
+            line-height: 4.5rem;
         }
 
         .bloc-menu-title {
@@ -674,8 +697,8 @@ $band-height-small : 48px;
 
     .page-menu-3 {
         .menu-big-title {
-            margin-top: 32px;
             font-size: 3rem;
+            line-height: 5rem;
         }
 
         .bloc-menu-title {
@@ -683,13 +706,22 @@ $band-height-small : 48px;
         }
     }
 
+    /* animation sur le titre */
+    .page-menu-2, .page-menu-3, .page-menu-4 {
+        .menu-big-title {
+            color: transparent;
+            background: radial-gradient(circle at center, $secondary-light, black 30%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: background-movement 20s infinite;
+        }
+    }
+
     #menu-1 {
         .menu-card-primary-title {
             margin-bottom: 24px;
             font-size: 1.9rem;
-        }
-
-        
+        }        
     }
 
     #menu-2 {
