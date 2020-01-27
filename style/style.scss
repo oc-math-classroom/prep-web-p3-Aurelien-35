@@ -1,0 +1,766 @@
+/* Colors */
+/* Purple6 */
+$primary-color : #9c27b0;
+$primary-light :#d05ce3;
+$primary-dark : #6a0080;
+/* Amber6 */
+$secondary-color : #ffc107;
+$secondary-light :#fff350;
+$secondary-dark : #c79100;
+
+/* Fonts */
+
+$frank : 'Frank Ruhl Libre', serif;
+$montserrat : 'Montserrat', sans-serif;
+
+$menu-1-primary : 'Eagle Lake', cursive;
+$menu-1-secondary : 'Roboto', sans-serif;
+
+$menu-2-primary : 'Tangerine', cursive;
+$menu-2-secondary : 'Lato', sans-serif;
+
+$menu-3-primary : 'Poiret One', cursive;
+$menu-3-secondary : 'Playfair Display', serif;
+
+$menu-4-primary : 'Allura', cursive;
+$menu-4-secondary : 'EB Garamond', serif;
+
+/* Width & Height */
+
+$menu-width : 40vw;
+$menu-height : $menu-width * 1.5;
+$max-menu-width : 150px;
+$max-menu-height : $max-menu-width * 1.5;
+$band-height : 48px;
+$band-height-small : 48px;
+
+/* Page */
+
+.page {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.color-band {
+    height: 4px;
+    background-color: $primary-dark;
+}
+
+/*pour affichage correct de l'ombre portée*/
+.move-to-front {
+    z-index: 10;
+}
+
+.title-band {
+    height: $band-height;
+    background-color: white;
+}
+
+.title-band a {
+    text-decoration: none;
+}
+
+/*réduction de la taille du logo pour l'affichage 320px*/
+.resize-for-small-screen {
+    height: $band-height;
+    width: $band-height;
+    object-fit: cover;
+}
+
+.title-1 {
+    margin-right: 1rem;
+    line-height: $band-height;
+    font-family: $frank;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    text-indent: 0.3rem;
+    word-spacing: -0.75rem;
+    color: black;
+}
+
+/*Ombre portée sans animation pour le titre de la page principale*/
+.shadow-static {
+    box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
+}
+
+.shadow {
+    box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
+    transition: all 0.15s ease-in-out;
+}
+
+.shadow:hover {
+    box-shadow: 0 3px 12px rgba(black, 0.25), 0 2px 20px rgba(black, 0.16);
+}
+
+.vertical-box-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.horizontal-box {
+    display: flex;
+    justify-content: center;
+}
+
+.box-wrap {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: auto;
+}
+
+.menu-card {
+    width: $menu-width;
+    height: $menu-height;
+    max-width: $max-menu-width;
+    max-height: $max-menu-height;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    transform-origin: 50% 50%;
+}
+
+.box-wrap a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-card-primary-title {
+    margin-bottom: 0.5rem;
+}
+
+/*pour saut de ligne sur taille réduite*/
+.line-break {
+    word-spacing: 200px;
+}
+
+.menu-card-secondary-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+#menu-1 {
+    .menu-card-primary-title {
+        margin-bottom: 1.5rem;
+        font-family: $menu-1-primary;
+        font-size: 1.2rem;
+    }
+
+    .menu-card-secondary-title {
+        font-family: $menu-1-secondary;
+    }
+}
+
+#menu-2 {
+    .menu-card-primary-title {
+        font-family: $menu-2-primary;
+        font-size: 2.2rem;
+    }
+
+    .menu-card-secondary-title {
+        font-family: $menu-2-secondary;
+    }
+}
+
+#menu-3 {
+    .menu-card-primary-title {
+        margin-bottom: 1rem;
+        font-family: $menu-3-primary;
+        font-size: 1.5rem;
+    }
+
+    .menu-card-secondary-title {
+        font-family: $menu-3-secondary;
+    }
+}
+
+#menu-4 {
+    .menu-card-primary-title {
+        font-family: $menu-4-primary;
+        font-size: 2rem;
+    }
+
+    .menu-card-secondary-title {
+        font-family: $menu-4-secondary;
+    }
+}
+
+.menu-card:hover {
+    animation: shaker 0.6s;
+}
+
+.button-next {
+    line-height: 16px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    padding: 8px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $primary-dark;
+    background-color: $secondary-color;
+    border-radius: 4px;
+    border: 1px solid $secondary-color;
+    box-sizing: border-box;
+    transition: all 0.35s ease-in-out;
+}
+
+.button-next:hover {
+    background-color: white;
+}
+
+.color-line {
+    height: 1px;
+    margin: 0px 8px;
+    background-color: $primary-light;
+}
+
+.footer-content {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.footer-content a {
+    line-height: 20px;
+    margin: 0px 4px 0px 4px;
+    padding: 8px 4px 4px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    text-decoration: none;
+    color: $primary-color;
+    transition: all 0.35s ease-in-out;
+}
+
+.footer-content a:hover {
+    color: white;
+    background-color: $secondary-color;
+}
+
+/* pages menu */
+
+/* reduction du bandeau titre */
+
+.title-band-reduce {
+    height: $band-height-small;
+    background-color: white;
+}
+
+.resize-reduce {
+    height: $band-height-small;
+    width: $band-height-small;
+}
+
+.title-1-reduce {
+    line-height: $band-height-small;
+    margin-right: 0.4rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    text-indent: 0.3rem;
+    word-spacing: -0.75rem;
+    color: black;
+}
+
+/* ajouté une icone pour signifier un lien de retour vers la page principale */
+
+.return-icon {
+    line-height: $band-height-small;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.align-center {
+    flex-grow: 1;
+    margin-right: 2rem;
+}
+
+.start-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.page-menu {
+
+    max-width: 800px;
+    margin-bottom: 16px;
+    padding: 4px 8px;
+
+    .bloc-menu-title {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .bloc-menu {
+
+        section {
+            margin-top: 16px;
+        }
+
+        .line {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .line-item,
+        .line-price {
+            line-height: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .line-item {
+            max-width: 80%;
+            text-align: left;
+        }
+
+        .line-price {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bold;
+            text-align: right;
+        }
+
+    }
+
+    /* lignes décoratives qui entourent les titres */
+
+    .bloc-title-line {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+
+        .line-left {
+            flex: 1 1 auto;
+            background: linear-gradient(to left, black, $primary-light);
+            clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
+            -webkit-clip-path: polygon(0 50%, 75% 35%, 85% 50%, 75% 65%);
+        }
+
+        .line-right {
+            flex: 1 1 auto;
+            background: linear-gradient(to right, black, $primary-light);
+            clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+            -webkit-clip-path: polygon(15% 50%, 30% 35%, 100% 50%, 30% 65%);
+        }
+    }  
+}
+
+/* lignes décoratives plus fines pour menu 2 et 4 */
+.page-menu-2, .page-menu-4 {
+    .bloc-title-line {
+        .line-left {
+            clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+            -webkit-clip-path: polygon(0 50%, 75% 42%, 85% 50%, 75% 58%);
+        }
+        .line-right {
+            clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
+            -webkit-clip-path: polygon(15% 50%, 30% 42%, 100% 50%, 30% 58%);
+        }        
+    }
+}
+
+.page-menu-1 {
+
+    .menu-big-title,
+    .bloc-menu-title {
+        font-family: $menu-1-primary;
+    }
+
+    .menu-big-title {
+        line-height: 2.5rem;
+        margin: 0 0 1.5rem 0;
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+    }
+
+    .line {
+        font-family: $menu-1-secondary;
+    }
+
+}
+
+.page-menu-2 {
+
+    .menu-big-title,
+    .bloc-menu-title {
+        font-family: $menu-2-primary;
+    }
+
+    .menu-big-title {
+        line-height: 3rem;
+        margin: 0.5rem 0 1.5rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .bloc-menu-title {
+        font-size: 2rem;
+    }
+
+    .line {
+        font-family: $menu-2-secondary;
+    }
+
+}
+
+.page-menu-3 {
+
+    .menu-big-title,
+    .bloc-title-line {
+        font-family: $menu-3-primary;
+    }
+
+    .menu-big-title {
+        line-height: 2.5rem;
+        margin: 0.5rem 0 1.5rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .bloc-menu-title {
+        font-size: 1.5rem;
+    }
+
+    .line {
+        font-family: $menu-3-secondary;
+    }
+
+}
+
+.page-menu-4 {
+
+    .menu-big-title,
+    .bloc-title-line {
+        font-family: $menu-4-primary;
+    }
+
+    .menu-big-title {
+        line-height: 3rem;
+        margin: 0.5rem 0 1.5rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .bloc-menu-title {
+        font-size: 2rem;
+    }
+
+    .line {
+        font-family: $menu-4-secondary;
+    }
+
+}
+
+/* pour mentions légales */
+
+.legal {
+    max-width: 800px;
+    margin: 8px;
+    padding: 8px;
+    font-family: $montserrat;
+    color: black;
+
+    .legal-bloc-title {
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+/* pour contact */
+
+.box-grow {
+    flex-grow: 1;
+}
+
+.form-bloc {
+    max-width: 800px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+}
+
+.form-title {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $montserrat;
+}
+
+.input-bloc {
+    min-width: 244px;
+    line-height: 36px;
+    margin-top: 16px;
+    margin-left: 4px;
+    padding-left: 16px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    font-weight: normal;
+    border-bottom: 1px solid silver;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.input-bloc-textarea {
+    height: 140px;
+}
+
+.align-right {
+    padding-right: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    width: 96px;
+    line-height: 16px;
+    margin-top: 16px;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    background-color: $primary-dark;
+    border-radius: 4px;
+    border: 1px solid $primary-dark;
+    transition: all 0.35s ease-in-out;
+}
+
+.submit-button:hover {
+    color: $primary-dark;
+    background-color: white;
+}
+
+@media (min-width : 375px) {
+
+    $band-height: 72px;
+
+    .color-band {
+        height: 8px;
+    }
+
+    .title-band {
+        height: $band-height;
+    }
+
+    .resize-for-small-screen {
+        height: $band-height;
+        width: $band-height;
+        object-fit: cover;
+    }
+
+    .title-1 {
+        margin-right: 1rem;
+        line-height: $band-height;
+        font-size: 3rem;
+        letter-spacing: -0.2rem;
+        text-indent: 0.3rem;
+        word-spacing: -0.75rem;
+    }
+
+    .page-menu-2,
+    .page-menu-3,
+    .page-menu-4 {
+        .menu-big-title {
+            margin-top: 16px;
+        }
+
+        .bloc-menu-title {
+            font-size: 2.1rem;
+        }
+    }
+
+    .page-menu-3 .bloc-menu-title {
+        font-size: 1.5rem;
+    }
+
+    .footer-content a {
+        padding: 8px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+
+    .menu-card .menu-card-secondary-title {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width : 768px) {
+
+    $max-menu-width: 200px;
+    $max-menu-height: $max-menu-width * 1.5;
+
+    .menu-card {
+        width: $menu-width;
+        height: $menu-height;
+        max-width: $max-menu-width;
+        max-height: $max-menu-height;
+    }
+
+    .title-1,
+    .title-1-reduce {
+        line-height: 96px;
+        font-size: 4rem;
+        letter-spacing: -0.2rem;
+        text-indent: 0.5rem;
+    }
+
+    .title-band,
+    .title-band-reduce {
+        height: 96px;
+    }
+
+    .resize-for-small-screen,
+    .resize-reduce {
+        height: 96px;
+        width: 96px;
+    }
+
+    .page-menu {
+
+        padding: 8px 8px;
+        max-width: 800px;
+
+        .menu-big-title {
+            margin-top: 1rem;
+        }
+
+        .bloc-menu-title {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* ajout d'un cadre blanc sur le menu pour l'affichage desktop */
+        .bloc-menu {
+            margin-top: 1rem;
+            padding: 16px;
+            background-color: white;
+            box-sizing: border-box;
+            border-top: 1px solid whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+            box-shadow: 0 3px 6px rgba(black, 0.25), 0 2px 4px rgba(black, 0.16);
+
+            .line {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .page-menu-1 {
+    /* animation sur le titre */
+        .menu-big-title {
+            color: transparent;
+            background: radial-gradient(circle at center, $secondary-color, black 20%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: background-movement 20s infinite;
+        }
+    }
+
+    .page-menu-2 .menu-big-title {
+        font-size: 4rem;
+    }
+
+    .page-menu-4 .menu-big-title {
+        font-size: 3.5rem;
+    }
+
+    .page-menu-2, .page-menu-4 {
+        .menu-big-title {
+            line-height: 4.5rem;
+        }
+
+        .bloc-menu-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    .page-menu-3 {
+        .menu-big-title {
+            font-size: 3rem;
+            line-height: 5rem;
+        }
+
+        .bloc-menu-title {
+            font-size: 2rem;
+        }
+    }
+
+    /* animation sur le titre */
+    .page-menu-2, .page-menu-3, .page-menu-4 {
+        .menu-big-title {
+            color: transparent;
+            background: radial-gradient(circle at center, $secondary-light, black 30%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: background-movement 20s infinite;
+        }
+    }
+
+    #menu-1 {
+        .menu-card-primary-title {
+            margin-bottom: 24px;
+            font-size: 1.9rem;
+        }        
+    }
+
+    #menu-2 {
+        .menu-card-primary-title {
+            font-size: 3.2rem;
+        }
+    }
+
+    #menu-3 {
+        .menu-card-primary-title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+    }
+
+    #menu-4 {
+        .menu-card-primary-title {
+            font-size: 3rem;
+        }
+    }
+
+    .return-icon {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-size: 4rem;
+        color: black;
+    }
+
+    .legal-bloc-title {
+        margin-top: 16px;
+    }
+
+    .align-center {
+        margin-right: 3.3rem;
+    }
+
+    .input-bloc-textarea {
+        height: 280px;
+    }
+}

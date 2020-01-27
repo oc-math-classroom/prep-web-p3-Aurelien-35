@@ -1,2 +1,18 @@
-# prep-web-p3-Aurelien-35
-projet 3 - création d'un site de reéservation restaurant
+﻿Oh My Food!
+===========
+
+## Description
+Site web réalisé par Aurelien-35, exercice sur OpenClassrooms, août 2019*
+
+## Technologies utilisées
+- html
+- css
+- scss
+- Visual Studio Code
+- Sass
+- Google Fonts
+- Font Awesome 
+
+
+
+
